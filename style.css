@@ -13,7 +13,7 @@ body{
     display: flex;
     align-items: center;
     background-color: #45d486;
-    height: 15vh;
+    height: 15%;
 }
 
 .header {
@@ -61,6 +61,7 @@ body{
     background-color: #90d4ac;
     color: #403F47;
     height: 100%;
+    padding: 0 100px;
 }
 
 .card {
@@ -71,11 +72,15 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: ghostwhite;
+    border-radius: 8px;
+    
 }
 
 .card img {
     width: 200px;
     height: 200px;
+    padding: 5px;
     filter: drop-shadow(4px 4px 5px #586C67)
 }
 .card img:hover{
@@ -121,5 +126,8 @@ body{
     .logo-text {
         font-size: 25px;
         margin-left: -18px;
+    }
+    .my-head select{
+        margin-top: -20px;
     }
 }
