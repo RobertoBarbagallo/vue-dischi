@@ -1,26 +1,108 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
-.albumscontainer{
+body{
+    background-color: #eeeae1;
+}
+
+.my-head {
+    display: flex;
+    align-items: center;
+    background-color: #b0c9da;
+    height: 15vh;
+}
+
+.header {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.logo-container {
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: .7;
+}
+
+.logo-text {
+    font-size: 80px;
+    color: #403F47;
+}
+
+.my-head select {
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    margin: 20px;
+    background-color: #eeeae1;
+    color: #403F47;
+    border-radius: 4px;
+}
+
+.albumscontainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-  
+    background-color: #eeeae1;
+    color: #403F47;
+    height: 100%;
 }
 
-.card{
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc((100% / 5) - 40px);
     margin: 20px;
-    width: 500px;
-    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.card img{
-    width: 400px;
-    height: 400px;
+.card img {
+    width: 200px;
+    height: 200px;
+    filter: drop-shadow(8px 8px 10px #586C67)
+}
+.card img:hover{
+    opacity: .7
+}
+.text-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .logo-text {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .my-head {
+        flex-wrap: wrap;
+        height: 20vh;
+        justify-content: center; 
+    }
+    .header {
+        width: 100%;
+    }
+    .logo-container {
+        height: 50px;
+        width: 50px;
+    }
+    .logo-text {
+        font-size: 25px;
+    }
 }
