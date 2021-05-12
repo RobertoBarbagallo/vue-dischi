@@ -6,13 +6,13 @@
 }
 
 body{
-    background-color: #eeeae1;
+    background-color: #90d4ac;
 }
 
 .my-head {
     display: flex;
     align-items: center;
-    background-color: #b0c9da;
+    background-color: #45d486;
     height: 15vh;
 }
 
@@ -21,6 +21,7 @@ body{
     flex-grow: 1;
     align-items: center;
     font-family: 'Fira Sans', sans-serif;
+    margin-left: 20px;
 }
 
 .logo-container {
@@ -37,8 +38,10 @@ body{
 }
 
 .logo-text {
-    font-size: 80px;
+    font-size: 60px;
+    font-weight: 800;
     color: #403F47;
+    margin-left: -15px;
 }
 
 .my-head select {
@@ -46,7 +49,7 @@ body{
     height: 20px;
     text-align: center;
     margin: 20px;
-    background-color: #eeeae1;
+    background-color: #90d4ac; 
     color: #403F47;
     border-radius: 4px;
 }
@@ -55,7 +58,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: #eeeae1;
+    background-color: #90d4ac;
     color: #403F47;
     height: 100%;
 }
@@ -73,14 +76,24 @@ body{
 .card img {
     width: 200px;
     height: 200px;
-    filter: drop-shadow(8px 8px 10px #586C67)
+    filter: drop-shadow(4px 4px 5px #586C67)
 }
 .card img:hover{
-    opacity: .7
+    opacity: .8;
+    transform: scale(1.1);
+    border-radius: 8px;
+    transition: .3s;
 }
 .text-container {
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
+}
+
+.text-container h3{
+    line-height: 16px;
+}
+.text-container p{
+    font-size: 10px;
 }
 
 @media screen and (max-width: 767px) {
@@ -97,6 +110,9 @@ body{
     }
     .header {
         width: 100%;
+        flex-grow: 0;
+        justify-content: center;
+        margin: 0;
     }
     .logo-container {
         height: 50px;
@@ -104,5 +120,6 @@ body{
     }
     .logo-text {
         font-size: 25px;
+        margin-left: -18px;
     }
 }
