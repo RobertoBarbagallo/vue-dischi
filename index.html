@@ -16,23 +16,20 @@
             <div class="my-head">
                 <div class="header">
                     <div class="logo-container">
-                        <img src="unnamed.jpg" alt="">
+                        <img src="logo.jpg" alt="logo di boolean">
                     </div>
                     <div class="logo-text">
                         Bool Music
                     </div>
                 </div>
-                <select v-model="selection" name="albumChoose" id="">
+                <select v-model="selection" name="albumChoose">
                     <option value="">All</option>
-                    <option v-for="(albumGenre, index) in albumGenres" :value="albumGenre">{{albumGenre}}</option>
+                    <option v-for="albumGenre in albumGenres" :value="albumGenre">{{albumGenre}}</option>
                 </select>
             </div>
-     
-
             <div class="albumscontainer">
-                <img v-if="albumsListFiltered.lenght == 0" src="" alt="">
                 <div class="card" v-for="album in albumsListFiltered">
-                    <img :src="album.poster" alt="">
+                    <img :src="album.poster" alt="album poster">
                     <div class="text-container">
                         <h3>{{album.title}}</h3>
                         <h5>{{album.author}}</h5>
